@@ -8,7 +8,7 @@ function AddData(){
    myInfoFromLS.push(myInfo);
    localStorage.setItem("myInfoFromLS", JSON.stringify(myInfoFromLS));
    console.log(myInfoFromLS, "myInfoFromLS");
-   displayTodo()
+   displayTodo();
 
 
 }
@@ -25,11 +25,15 @@ function displayTodo(){
 
     for (let i= 0; i < myInfoFromLS.length; i++) {
 
-      student += `<div id="content"><p>${myInfoFromLS[i]}</p></div>`
+      student += `<div id="content"><p>${myInfoFromLS[i]}</p>
+      <i class="fa-solid fa-trash"></i>
+      </div>`
         
     }
      console.log(student, "student");
      studentInfo.innerHTML = student;
    }
 displayTodo()
+
+
 
